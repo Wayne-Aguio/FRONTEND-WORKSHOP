@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Survey Form Exercise-1</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+            }
+            .form-group{
+                margin-bottom: 20px;
+            }
+            label{
+                display: block;
+                font-weight: bold;
+      }
+        </style>
+    </head>
+    <body>
+        <h2>Survey Form</h2>
+        <form action="submit-form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>What is your favorite programming language</label>
+                <input type="radio"id="javascript" name="language" value="javascript"> <label for="javascript">Javascript</label>
+                <input type="radio"id="python" name="language" value="python"> <label for="python">python</label>
+                <input type="radio"id="java" name="language" value="java"> <label for="java">java</label>
+            </div>
+
+            <div class="form-group">
+                <label>Which development tools do you use? (Check all that apply)</label>
+                <input type="checkbox"id="vs-code" name="tools" value="VS Code"> <label for="vs-code">VS Code</label>
+                <input type="checkbox"id="intellij" name="tools" value="IntelliJ IDEA"> <label for="intellij">IntelliJ IDEA</label>
+                <input type="checkbox"id="eclipse" name="tools" value="Eclipse"> <label for="eclipse">Eclipse</label>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
